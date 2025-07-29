@@ -1,83 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Edona Mema – Cybersecurity Resume</title>
   <style>
     body {
-      background-color: #e0e0e0;
-      color: #013220; /* Evergreen dark green */
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ec; /* Light evergreen background */
+      color: #013220; /* Dark evergreen text */
+      font-family: 'Segoe UI', Tahoma, sans-serif;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      position: relative;
     }
 
-    .dragon-banner {
-      width: 100%;
-      height: 250px;
-      background: url('https://i.imgur.com/V9SdmV3.png') center no-repeat;
-      background-size: contain;
-      animation: float 8s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
+    .dragon-bg {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      opacity: 0.12;
+      z-index: -1;
+      filter: hue-rotate(100deg) saturate(2);
     }
 
     .container {
-      padding: 40px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+      padding: 60px 20px;
     }
 
-    h1, h2 {
-      color: #012d1a;
+    .section {
+      background-color: #d4ede4; /* Soft mint green */
+      border: 1px solid #b1d8cc;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0, 64, 51, 0.05);
+    }
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 5px;
+      color: #014421;
+    }
+
+    h2 {
+      color: #014421;
+      font-size: 20px;
+      border-bottom: 1px solid #9ecdbf;
+      padding-bottom: 5px;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     .quote {
-      font-style: italic;
       text-align: center;
-      margin-top: 40px;
-      color: #004d26;
-    }
-
-    a {
-      color: #004d26;
-    }
-
-    hr {
-      border: 1px solid #004d26;
+      font-style: italic;
+      font-size: 18px;
+      color: #015f3b;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <div class="dragon-banner"></div>
+  <!-- Dragon watermark -->
+  <img class="dragon-bg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Dragon" />
 
   <div class="container">
     <h1>Edona Mema</h1>
-    <h2>Cybersecurity Enthusiast | Risk Management | Threat Detection</h2>
-    <p>Currently enrolled in The Knowledge House Cybersecurity Fellowship, completing 900+ hours of hands-on training including:</p>
-    <ul>
-      <li>Network Security & Incident Response</li>
-      <li>Risk Management Frameworks</li>
-      <li>Capture the Flag (CTF) participation</li>
-      <li>Training peers in study halls & technical walkthroughs</li>
-    </ul>
 
-    <p>Previously supported technical operations at Microsoft Advertising, resolving 30+ monthly tickets and contributing to campaign optimization through Excel and Power BI.</p>
+    <div class="section">
+      <h2>Summary</h2>
+      <p>Adaptable professional transitioning into Compliance, GRC, and IAM roles with experience in access controls, secure data handling, and documentation. Gaining hands-on cybersecurity skills through virtual labs and national CTFs. Currently pursuing CompTIA Security+ to deepen knowledge in risk management and regulatory compliance.</p>
+    </div>
 
-    <p>Skills: Security+ Concepts, Power BI, VirtualBox, pfSense, Metasploitable2, Kali Linux, SEM, Microsoft Excel</p>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Access Control & Permissions Management (Active Directory exposure)</li>
+        <li>Compliance & Policy Documentation</li>
+        <li>Risk Assessment, Mitigation & Incident Response</li>
+        <li>Data Governance, Analysis & Visualization (Excel, Power BI)</li>
+        <li>Network Security & Monitoring (pfSense, IDS, Wireshark)</li>
+        <li>Vulnerability Scanning & Exploitation Tools (Nmap, Metasploit)</li>
+        <li>Security Awareness Training & Stakeholder Communication</li>
+      </ul>
+    </div>
 
-    <hr>
+    <div class="section">
+      <h2>Experience</h2>
+      <p><strong>Compliance & Data Analysis Associate – Microsoft Advertising</strong><br />
+      New York, NY | June 2023 – January 2025</p>
+      <ul>
+        <li>Resolved 30+ monthly technical tickets involving user permissions and access issues, applying IAM principles.</li>
+        <li>Documented secure data handling procedures in line with compliance standards.</li>
+        <li>Led onboarding sessions and trained peers on account management and security protocols.</li>
+        <li>Collaborated with Power BI teams to create dashboards, resolving 85% of data requests.</li>
+        <li>Improved validation processes, reducing reporting errors by 40%.</li>
+      </ul>
+
+      <p><strong>Community Compliance & Operations Coordinator – Pomonok Community Center</strong><br />
+      Pomonok, NY | June 2021 – December 2021</p>
+      <ul>
+        <li>Managed weekly services for 500+ residents, ensuring secure data handling and documentation for audits.</li>
+        <li>Implemented Plentiful App to track participant data, reducing errors by 40%.</li>
+        <li>Created educational materials and led compliance awareness sessions.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Virtual Cybersecurity Lab Environment (2024–2025):</strong> Designed and deployed a full lab using VirtualBox, pfSense, Kali Linux, and Windows Server. Simulated IAM tasks, incident response, and network segmentation using Snort and firewall rules.</li>
+        <li><strong>Bloomberg National CTF (June 2025):</strong> Solved 15+ challenges in cryptography, reverse engineering, and web security. Documented solutions aligned with GRC reporting. Collaborated in a high-pressure team simulating SOC-style response.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>The Knowledge House – Bronx, NY</strong><br />
+        Innovation Fellowship – Cybersecurity Track | Expected Dec 2025</li>
+        <li><strong>COOP – New York, NY</strong><br />
+        Digital Marketing Apprentice | June 2023</li>
+        <li><strong>Queens College – Queens, NY</strong><br />
+        Bachelor of Arts in Urban Studies | June 2022</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>AWS Certified Cloud Practitioner (Active)</li>
+        <li>Studying for CompTIA Security+ (Expected Q3 2025)</li>
+      </ul>
+    </div>
 
     <div class="quote">
-      “Every firewall I build, every threat I catch, brings me closer to securing the future.”
+      “Fueled by curiosity.”
     </div>
   </div>
-
 </body>
 </html>
