@@ -1,131 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Edona Mema – Cybersecurity Resume</title>
   <style>
     body {
+      margin: 0;
       font-family: Calibri, sans-serif;
-      margin: 40px;
-      background-color: #eef2f7;
-      color: #333;
+      background-color: #d8d8d8;
+      color: #00bfff;
       position: relative;
       overflow-x: hidden;
     }
 
-    /* Dragon background animation */
     .dragon-bg {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .dragon-icon {
-      position: absolute;
-      width: 120px;
-      opacity: 0.05;
-      animation: float 30s linear infinite;
-    }
-
-    .dragon-icon:nth-child(1) {
-      top: 10%;
-      left: 5%;
-      animation-delay: 0s;
-    }
-
-    .dragon-icon:nth-child(2) {
-      top: 60%;
-      left: 80%;
-      animation-delay: 10s;
-    }
-
-    .dragon-icon:nth-child(3) {
-      top: 30%;
+      top: 50%;
       left: 50%;
-      animation-delay: 20s;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      opacity: 0.04;
+      z-index: -1;
     }
 
-    @keyframes float {
-      0% {
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-20px) rotate(10deg);
-      }
-      100% {
-        transform: translateY(0) rotate(0deg);
-      }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.02);
+      border-radius: 10px;
     }
 
     h1 {
-      font-size: 32px;
-      color: #2c3e50;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 14px;
     }
 
     h2 {
-      color: #1a5276;
-      border-bottom: 2px solid #2980b9;
+      border-bottom: 1px solid #00bfff;
       padding-bottom: 5px;
-    }
-
-    .section {
-      margin-top: 25px;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+      font-size: 20px;
+      text-transform: uppercase;
     }
 
     ul {
-      list-style-type: disc;
       padding-left: 20px;
     }
 
-    hr {
-      border: 0;
-      border-top: 2px solid #2980b9;
-      margin: 20px 0;
+    li {
+      margin-bottom: 10px;
     }
 
-    p {
-      margin: 5px 0 10px 0;
-    }
-
-    .dragon {
+    .footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 50px;
+      font-style: italic;
+      font-size: 16px;
     }
 
-    .dragon img {
-      width: 120px;
-      height: auto;
+    .footer span {
+      font-size: 20px;
     }
   </style>
 </head>
 <body>
-  <!-- Animated Background -->
-  <div class="dragon-bg">
-    <img class="dragon-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Floating Dragon" />
-    <img class="dragon-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Floating Dragon" />
-    <img class="dragon-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Floating Dragon" />
-  </div>
+  <!-- Background Dragon -->
+  <img class="dragon-bg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Dragon" />
 
-  <!-- Resume Content -->
-  <h1><strong>Edona Mema</strong></h1>
-  <p>Email: edonamema313@gmail.com | Phone: 347-320-1318 | Location: New York, NY</p>
-  <hr />
+  <div class="container">
+    <h1>Edona Mema</h1>
+    <div class="contact">
+      Email: edonamema313@gmail.com | Phone: 347-320-1318 | Location: New York, NY
+    </div>
 
-  <div class="section">
     <h2>Summary</h2>
-    <p>Adaptable professional transitioning into Compliance, GRC, and IAM roles with experience in access controls, secure data handling, and documentation. Gaining hands-on cybersecurity skills through virtual labs and national CTFs. Currently pursuing CompTIA Security+ to deepen knowledge in risk management and regulatory compliance.</p>
-  </div>
+    <p>
+      Adaptable professional transitioning into Compliance, GRC, and IAM roles with experience in access controls,
+      secure data handling, and documentation. Gaining hands-on cybersecurity skills through virtual labs and national CTFs.
+      Currently pursuing CompTIA Security+ to deepen knowledge in risk management and regulatory compliance.
+    </p>
 
-  <div class="section">
     <h2>Skills</h2>
     <ul>
       <li>Access Control & Permissions Management (Active Directory exposure)</li>
@@ -136,60 +98,42 @@
       <li>Vulnerability Scanning & Exploitation Tools (Nmap, Metasploit)</li>
       <li>Security Awareness Training & Stakeholder Communication</li>
     </ul>
-  </div>
 
-  <div class="section">
     <h2>Experience</h2>
     <p><strong>Compliance & Data Analysis Associate – Microsoft Advertising</strong><br />
-    New York, NY | June 2023 – January 2025</p>
+      New York, NY | June 2023 – January 2025</p>
     <ul>
-      <li>Resolved 30+ monthly technical tickets involving user permissions and access issues, applying IAM principles.</li>
+      <li>Resolved 30+ monthly technical tickets involving user permissions and access issues.</li>
       <li>Documented secure data handling procedures in line with compliance standards.</li>
       <li>Led onboarding sessions and trained peers on account management and security protocols.</li>
-      <li>Collaborated with Power BI teams to create dashboards, resolving 85% of data requests.</li>
-      <li>Improved validation processes, reducing reporting errors by 40%.</li>
+      <li>Created dashboards with Power BI that resolved 85% of stakeholder data requests.</li>
+      <li>Reduced reporting errors by 40% through validation enhancements.</li>
     </ul>
-  </div>
 
-  <div class="section">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Virtual Cybersecurity Lab Environment:</strong> Designed and deployed a full lab using VirtualBox, pfSense, Kali Linux, and Windows Server. Simulated IAM tasks, incident response, and network segmentation using Snort and firewall rules.</li>
-      <li><strong>Bloomberg National CTF:</strong> Solved 15+ challenges in cryptography, reverse engineering, and web security. Documented solutions aligned with GRC reporting. Collaborated in a high-pressure team simulating SOC-style response.</li>
+      <li><strong>Virtual Cybersecurity Lab:</strong> Built and configured a virtual lab using pfSense, Kali Linux, and Windows Server. Simulated IAM tasks, firewall rules, and IDS monitoring with Snort.</li>
+      <li><strong>Bloomberg National CTF:</strong> Solved 15+ challenges in cryptography, web security, and reverse engineering. Documented findings and aligned with GRC frameworks.</li>
     </ul>
-  </div>
 
-  <div class="section">
     <h2>Education</h2>
-    <p><strong>The Knowledge House – Bronx, NY</strong><br />
-    Innovation Fellowship – Cybersecurity Track | Expected Dec 2025</p>
     <ul>
-      <li>Completing 900+ hours of cybersecurity training in risk management, incident response, and network security.</li>
-      <li>Leading projects on access misconfiguration, breach detection, and compliance remediation.</li>
-      <li>Competing in national CTFs; developing incident response playbooks aligned with NIST/CIS frameworks.</li>
+      <li><strong>The Knowledge House – Innovation Fellowship (Expected Dec 2025)</strong><br />
+        900+ hours of cybersecurity training in network security, risk management, GRC, and incident response.</li>
+      <li><strong>COOP – Digital Marketing Program (June 2023)</strong></li>
+      <li><strong>Queens College – B.A. in Urban Studies (June 2022)</strong></li>
     </ul>
 
-    <p><strong>COOP – New York, NY</strong><br />
-    Digital Marketing Apprentice | June 2023</p>
-    <ul>
-      <li>Completed 300+ hours in digital marketing, focusing on data analysis and stakeholder communication.</li>
-    </ul>
-
-    <p><strong>Queens College – Queens, NY</strong><br />
-    Bachelor of Arts in Urban Studies | June 2022</p>
-  </div>
-
-  <div class="section">
     <h2>Certifications</h2>
     <ul>
       <li>AWS Certified Cloud Practitioner (Active)</li>
       <li>Studying for CompTIA Security+ (Expected Q3 2025)</li>
     </ul>
-  </div>
 
-  <div class="dragon">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Dragon Icon">
-    <p><em>Fueled by curiosity, driven like a dragon 🐉</em></p>
+    <div class="footer">
+      <span>🐉</span><br />
+      Fueled by curiosity, driven like a dragon
+    </div>
   </div>
 </body>
 </html>
