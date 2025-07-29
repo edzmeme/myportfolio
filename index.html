@@ -1,139 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Edona Mema – Cybersecurity Resume</title>
   <style>
     body {
+      background-color: #e0e0e0;
+      color: #013220; /* Evergreen dark green */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-family: Calibri, sans-serif;
-      background-color: #d8d8d8;
-      color: #00bfff;
-      position: relative;
+      padding: 0;
       overflow-x: hidden;
     }
 
-    .dragon-bg {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 700px;
-      opacity: 0.04;
-      z-index: -1;
+    .dragon-banner {
+      width: 100%;
+      height: 250px;
+      background: url('https://i.imgur.com/V9SdmV3.png') center no-repeat;
+      background-size: contain;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
 
     .container {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.02);
-      border-radius: 10px;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 5px;
+    h1, h2 {
+      color: #012d1a;
     }
 
-    .contact {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 14px;
-    }
-
-    h2 {
-      border-bottom: 1px solid #00bfff;
-      padding-bottom: 5px;
-      margin-top: 40px;
-      font-size: 20px;
-      text-transform: uppercase;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 50px;
+    .quote {
       font-style: italic;
-      font-size: 16px;
+      text-align: center;
+      margin-top: 40px;
+      color: #004d26;
     }
 
-    .footer span {
-      font-size: 20px;
+    a {
+      color: #004d26;
+    }
+
+    hr {
+      border: 1px solid #004d26;
     }
   </style>
 </head>
 <body>
-  <!-- Background Dragon -->
-  <img class="dragon-bg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Dragon" />
+
+  <div class="dragon-banner"></div>
 
   <div class="container">
     <h1>Edona Mema</h1>
-    <div class="contact">
-      Email: edonamema313@gmail.com | Phone: 347-320-1318 | Location: New York, NY
-    </div>
-
-    <h2>Summary</h2>
-    <p>
-      Adaptable professional transitioning into Compliance, GRC, and IAM roles with experience in access controls,
-      secure data handling, and documentation. Gaining hands-on cybersecurity skills through virtual labs and national CTFs.
-      Currently pursuing CompTIA Security+ to deepen knowledge in risk management and regulatory compliance.
-    </p>
-
-    <h2>Skills</h2>
+    <h2>Cybersecurity Enthusiast | Risk Management | Threat Detection</h2>
+    <p>Currently enrolled in The Knowledge House Cybersecurity Fellowship, completing 900+ hours of hands-on training including:</p>
     <ul>
-      <li>Access Control & Permissions Management (Active Directory exposure)</li>
-      <li>Compliance & Policy Documentation</li>
-      <li>Risk Assessment, Mitigation & Incident Response</li>
-      <li>Data Governance, Analysis & Visualization (Excel, Power BI)</li>
-      <li>Network Security & Monitoring (pfSense, IDS, Wireshark)</li>
-      <li>Vulnerability Scanning & Exploitation Tools (Nmap, Metasploit)</li>
-      <li>Security Awareness Training & Stakeholder Communication</li>
+      <li>Network Security & Incident Response</li>
+      <li>Risk Management Frameworks</li>
+      <li>Capture the Flag (CTF) participation</li>
+      <li>Training peers in study halls & technical walkthroughs</li>
     </ul>
 
-    <h2>Experience</h2>
-    <p><strong>Compliance & Data Analysis Associate – Microsoft Advertising</strong><br />
-      New York, NY | June 2023 – January 2025</p>
-    <ul>
-      <li>Resolved 30+ monthly technical tickets involving user permissions and access issues.</li>
-      <li>Documented secure data handling procedures in line with compliance standards.</li>
-      <li>Led onboarding sessions and trained peers on account management and security protocols.</li>
-      <li>Created dashboards with Power BI that resolved 85% of stakeholder data requests.</li>
-      <li>Reduced reporting errors by 40% through validation enhancements.</li>
-    </ul>
+    <p>Previously supported technical operations at Microsoft Advertising, resolving 30+ monthly tickets and contributing to campaign optimization through Excel and Power BI.</p>
 
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Virtual Cybersecurity Lab:</strong> Built and configured a virtual lab using pfSense, Kali Linux, and Windows Server. Simulated IAM tasks, firewall rules, and IDS monitoring with Snort.</li>
-      <li><strong>Bloomberg National CTF:</strong> Solved 15+ challenges in cryptography, web security, and reverse engineering. Documented findings and aligned with GRC frameworks.</li>
-    </ul>
+    <p>Skills: Security+ Concepts, Power BI, VirtualBox, pfSense, Metasploitable2, Kali Linux, SEM, Microsoft Excel</p>
 
-    <h2>Education</h2>
-    <ul>
-      <li><strong>The Knowledge House – Innovation Fellowship (Expected Dec 2025)</strong><br />
-        900+ hours of cybersecurity training in network security, risk management, GRC, and incident response.</li>
-      <li><strong>COOP – Digital Marketing Program (June 2023)</strong></li>
-      <li><strong>Queens College – B.A. in Urban Studies (June 2022)</strong></li>
-    </ul>
+    <hr>
 
-    <h2>Certifications</h2>
-    <ul>
-      <li>AWS Certified Cloud Practitioner (Active)</li>
-      <li>Studying for CompTIA Security+ (Expected Q3 2025)</li>
-    </ul>
-
-    <div class="footer">
-      <span>🐉</span><br />
-      Fueled by curiosity, driven like a dragon
+    <div class="quote">
+      “Every firewall I build, every threat I catch, brings me closer to securing the future.”
     </div>
   </div>
+
 </body>
 </html>
