@@ -9,6 +9,57 @@
       margin: 40px;
       background-color: #eef2f7;
       color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Dragon background animation */
+    .dragon-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .dragon-icon {
+      position: absolute;
+      width: 120px;
+      opacity: 0.05;
+      animation: float 30s linear infinite;
+    }
+
+    .dragon-icon:nth-child(1) {
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+
+    .dragon-icon:nth-child(2) {
+      top: 60%;
+      left: 80%;
+      animation-delay: 10s;
+    }
+
+    .dragon-icon:nth-child(3) {
+      top: 30%;
+      left: 50%;
+      animation-delay: 20s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(10deg);
+      }
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
     }
 
     h1 {
@@ -57,90 +108,88 @@
   </style>
 </head>
 <body>
+  <!-- Animated Background -->
+  <div class="dragon-bg">
+    <img class="dragon-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Floating Dragon" />
+    <img class="dragon-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Floating Dragon" />
+    <img class="dragon-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Floating Dragon" />
+  </div>
+
+  <!-- Resume Content -->
   <h1><strong>Edona Mema</strong></h1>
   <p>Email: edonamema313@gmail.com | Phone: 347-320-1318 | Location: New York, NY</p>
   <hr />
 
   <div class="section">
     <h2>Summary</h2>
-    <p>Aspiring cybersecurity professional transitioning from a background in paid search and urban studies.
-    Gained hands-on experience through The Knowledge House Innovation Fellowship, resolving technical issues,
-    supporting ad operations, and building cybersecurity labs. Strong foundation in data analysis, troubleshooting,
-    and ethical hacking, with a growing skill set in network defense and vulnerability assessment.</p>
+    <p>Adaptable professional transitioning into Compliance, GRC, and IAM roles with experience in access controls, secure data handling, and documentation. Gaining hands-on cybersecurity skills through virtual labs and national CTFs. Currently pursuing CompTIA Security+ to deepen knowledge in risk management and regulatory compliance.</p>
   </div>
 
   <div class="section">
     <h2>Skills</h2>
     <ul>
-      <li>Cybersecurity Fundamentals (Network Security, Ethical Hacking, Threat Analysis)</li>
-      <li>Linux, VirtualBox, pfSense, Kali Linux, Metasploitable2</li>
-      <li>Microsoft Excel (Pivot Tables, XLOOKUP), Power BI</li>
-      <li>Google Ads, Bing Ads, SEMrush, Paid Search & Campaign Optimization</li>
-      <li>SEO, SEM, Keyword Research</li>
-      <li>Technical Documentation & Ticketing</li>
-      <li>Languages: English (Native), Albanian (Fluent)</li>
+      <li>Access Control & Permissions Management (Active Directory exposure)</li>
+      <li>Compliance & Policy Documentation</li>
+      <li>Risk Assessment, Mitigation & Incident Response</li>
+      <li>Data Governance, Analysis & Visualization (Excel, Power BI)</li>
+      <li>Network Security & Monitoring (pfSense, IDS, Wireshark)</li>
+      <li>Vulnerability Scanning & Exploitation Tools (Nmap, Metasploit)</li>
+      <li>Security Awareness Training & Stakeholder Communication</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Experience</h2>
-
-    <p><strong>Paid Search Account Coordinator – Microsoft Advertising</strong><br />
+    <p><strong>Compliance & Data Analysis Associate – Microsoft Advertising</strong><br />
     New York, NY | June 2023 – January 2025</p>
     <ul>
-      <li>Analyzed YoY trends and match type parity to drive a 35% improvement in account performance.</li>
-      <li>Resolved 30+ technical support tickets monthly, applying strong troubleshooting and problem-solving skills.</li>
-      <li>Led onboarding and technical training for new hires, improving team readiness by 25%.</li>
-      <li>Enhanced Power BI dashboard security and reporting, resolving 85% of ticket inquiries.</li>
-      <li>Reduced reporting errors by 40% through improved data validation processes.</li>
-    </ul>
-
-    <p><strong>Food Pantry Intern – Pomonok Community Center</strong><br />
-    Pomonok, NY | June 2021 – December 2021</p>
-    <ul>
-      <li>Coordinated weekly food distribution for 50+ participants, increasing access by 20%.</li>
-      <li>Integrated the Plentiful App, reducing data discrepancies by 40% and improving user privacy.</li>
-      <li>Led educational sessions that boosted program adoption by 25%.</li>
-      <li>Designed outreach materials that increased sign-ups by 25%.</li>
+      <li>Resolved 30+ monthly technical tickets involving user permissions and access issues, applying IAM principles.</li>
+      <li>Documented secure data handling procedures in line with compliance standards.</li>
+      <li>Led onboarding sessions and trained peers on account management and security protocols.</li>
+      <li>Collaborated with Power BI teams to create dashboards, resolving 85% of data requests.</li>
+      <li>Improved validation processes, reducing reporting errors by 40%.</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Cybersecurity Home Lab:</strong> Built a virtualized home lab with VirtualBox using pfSense, Kali Linux, Ubuntu Server, and Metasploitable2 for penetration testing and IDS/IPS monitoring.</li>
-      <li><strong>Capture The Flag Challenge – Bloomberg Collaboration:</strong> Participated in a 15-level CTF involving cryptography, network penetration, and web security. Improved team efficiency by 30%, capturing 85% of flags.</li>
+      <li><strong>Virtual Cybersecurity Lab Environment:</strong> Designed and deployed a full lab using VirtualBox, pfSense, Kali Linux, and Windows Server. Simulated IAM tasks, incident response, and network segmentation using Snort and firewall rules.</li>
+      <li><strong>Bloomberg National CTF:</strong> Solved 15+ challenges in cryptography, reverse engineering, and web security. Documented solutions aligned with GRC reporting. Collaborated in a high-pressure team simulating SOC-style response.</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Education</h2>
-
     <p><strong>The Knowledge House – Bronx, NY</strong><br />
-    Innovation Fellowship – Cybersecurity Track | Expected Graduation: December 2025</p>
+    Innovation Fellowship – Cybersecurity Track | Expected Dec 2025</p>
     <ul>
-      <li>Completed 900+ hours of training in cybersecurity, risk management, and ethical hacking.</li>
-      <li>Built and documented secure home lab environments.</li>
-      <li>Collaborated on CTF challenges with Bloomberg and the Department of Defense.</li>
-      <li>Presented team project on threat mitigation at program showcase.</li>
+      <li>Completing 900+ hours of cybersecurity training in risk management, incident response, and network security.</li>
+      <li>Leading projects on access misconfiguration, breach detection, and compliance remediation.</li>
+      <li>Competing in national CTFs; developing incident response playbooks aligned with NIST/CIS frameworks.</li>
     </ul>
 
     <p><strong>COOP – New York, NY</strong><br />
     Digital Marketing Apprentice | June 2023</p>
     <ul>
-      <li>Created mock-up web pages and SEO strategies using SEMrush and on-page SEO techniques.</li>
-      <li>Completed 300+ hours in digital marketing with a focus on paid search and planning.</li>
+      <li>Completed 300+ hours in digital marketing, focusing on data analysis and stakeholder communication.</li>
     </ul>
 
     <p><strong>Queens College – Queens, NY</strong><br />
-    Bachelor of Arts in Urban Studies | Graduated: June 2022</p>
+    Bachelor of Arts in Urban Studies | June 2022</p>
+  </div>
+
+  <div class="section">
+    <h2>Certifications</h2>
+    <ul>
+      <li>AWS Certified Cloud Practitioner (Active)</li>
+      <li>Studying for CompTIA Security+ (Expected Q3 2025)</li>
+    </ul>
   </div>
 
   <div class="dragon">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Dragon Icon">
     <p><em>Fueled by curiosity, driven like a dragon 🐉</em></p>
   </div>
-
 </body>
 </html>
-
