@@ -2,17 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Edona Mema – Cybersecurity Resume</title>
+  <title>Edona Mema – Cybersecurity Portfolio</title>
   <style>
+    /* === BASE COLORS === */
+    :root {
+      --bg: #e6f0ec;
+      --mint: #d4ede4;
+      --evergreen: #014421;
+      --dark-emerald: #013220;
+      --soft-border: #b1d8cc;
+      --highlight: #3ddc84;
+    }
+
     body {
-      background-color: #e6f0ec; /* Light evergreen background */
-      color: #013220; /* Dark evergreen text */
+      background: radial-gradient(circle at 80% -20%, rgba(61,220,132,0.12), transparent 50%), var(--bg);
+      color: var(--dark-emerald);
       font-family: 'Segoe UI', Tahoma, sans-serif;
       margin: 0;
       padding: 0;
       position: relative;
+      overflow-x: hidden;
+      transition: background 0.6s ease;
     }
 
+    /* === DRAGON WATERMARK === */
     .dragon-bg {
       position: fixed;
       top: 50%;
@@ -22,47 +35,91 @@
       opacity: 0.12;
       z-index: -1;
       filter: hue-rotate(100deg) saturate(2);
+      animation: drift 30s linear infinite alternate;
+    }
+    @keyframes drift {
+      from { transform: translate(-50%, -50%) scale(1); }
+      to   { transform: translate(-49%, -51%) scale(1.05); }
     }
 
+    /* === NAVIGATION === */
+    nav {
+      background-color: rgba(183,219,205,0.95);
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px;
+      border-bottom: 1px solid #9ecdbf;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      backdrop-filter: blur(6px);
+    }
+
+    nav button {
+      background: var(--evergreen);
+      color: var(--bg);
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      box-shadow: 0 0 0 rgba(61,220,132,0);
+    }
+
+    nav button:hover,
+    nav button.active {
+      background: #027a46;
+      box-shadow: 0 0 10px rgba(61,220,132,0.6), 0 0 20px rgba(1,68,33,0.4);
+    }
+
+    /* === CONTENT === */
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 40px 20px;
     }
 
     .section {
-      background-color: #d4ede4; /* Soft mint green */
-      border: 1px solid #b1d8cc;
+      background-color: var(--mint);
+      border: 1px solid var(--soft-border);
       border-radius: 10px;
       padding: 25px;
       margin-bottom: 30px;
       box-shadow: 0 2px 6px rgba(0, 64, 51, 0.05);
+      display: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
     }
 
     h1 {
       font-size: 36px;
       text-align: center;
-      margin-bottom: 5px;
-      color: #014421;
+      margin: 40px 0 10px;
+      color: var(--evergreen);
+      text-shadow: 0 0 8px rgba(61,220,132,0.2);
     }
 
     h2 {
-      color: #014421;
+      color: var(--evergreen);
       font-size: 20px;
       border-bottom: 1px solid #9ecdbf;
       padding-bottom: 5px;
       margin-top: 0;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    p, li {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
+    p, li { font-size: 16px; line-height: 1.6; }
+    ul { padding-left: 20px; }
 
     .quote {
       text-align: center;
@@ -71,76 +128,59 @@
       color: #015f3b;
       margin-top: 30px;
     }
+
+    /* === DRAGON GLOW EFFECT === */
+    .dragon-glow {
+      animation: glow 1s ease-in-out forwards;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 0 rgba(61,220,132,0); }
+      to { box-shadow: 0 0 30px rgba(61,220,132,0.4), 0 0 60px rgba(1,68,33,0.3); }
+    }
   </style>
 </head>
 <body>
+  <img class="dragon-bg"
+       src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png"
+       alt="Dragon" />
 
-  <!-- Dragon watermark -->
-  <img class="dragon-bg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Dragon_icon.svg/1024px-Dragon_icon.svg.png" alt="Dragon" />
+  <h1>Edona Mema</h1>
+
+  <!-- Navigation Tabs -->
+  <nav>
+    <button class="tab-btn active" data-tab="about">About Me</button>
+    <button class="tab-btn" data-tab="experience">Experience</button>
+    <button class="tab-btn" data-tab="projects">Projects</button>
+    <button class="tab-btn" data-tab="contact">Contact Me</button>
+  </nav>
 
   <div class="container">
-    <h1>Edona Mema</h1>
-
-    <div class="section">
+    <!-- ABOUT -->
+    <div id="about" class="section active dragon-glow">
       <h2>Summary</h2>
       <p>Adaptable professional transitioning into Compliance, GRC, and IAM roles with experience in access controls, secure data handling, and documentation. Gaining hands-on cybersecurity skills through virtual labs and national CTFs. Currently pursuing CompTIA Security+ to deepen knowledge in risk management and regulatory compliance.</p>
-    </div>
 
-    <div class="section">
       <h2>Skills</h2>
       <ul>
         <li>Access Control & Permissions Management (Active Directory exposure)</li>
         <li>Compliance & Policy Documentation</li>
         <li>Risk Assessment, Mitigation & Incident Response</li>
-        <li>Data Governance, Analysis & Visualization (Excel, Power BI)</li>
+        <li>Data Governance & Visualization (Excel, Power BI)</li>
         <li>Network Security & Monitoring (pfSense, IDS, Wireshark)</li>
-        <li>Vulnerability Scanning & Exploitation Tools (Nmap, Metasploit)</li>
-        <li>Security Awareness Training & Stakeholder Communication</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Experience</h2>
-      <p><strong>Compliance & Data Analysis Associate – Microsoft Advertising</strong><br />
-      New York, NY | June 2023 – January 2025</p>
-      <ul>
-        <li>Resolved 30+ monthly technical tickets involving user permissions and access issues, applying IAM principles.</li>
-        <li>Documented secure data handling procedures in line with compliance standards.</li>
-        <li>Led onboarding sessions and trained peers on account management and security protocols.</li>
-        <li>Collaborated with Power BI teams to create dashboards, resolving 85% of data requests.</li>
-        <li>Improved validation processes, reducing reporting errors by 40%.</li>
+        <li>Vulnerability Scanning (Nmap, Metasploit)</li>
+        <li>Security Awareness & Stakeholder Communication</li>
       </ul>
 
-      <p><strong>Community Compliance & Operations Coordinator – Pomonok Community Center</strong><br />
-      Pomonok, NY | June 2021 – December 2021</p>
-      <ul>
-        <li>Managed weekly services for 500+ residents, ensuring secure data handling and documentation for audits.</li>
-        <li>Implemented Plentiful App to track participant data, reducing errors by 40%.</li>
-        <li>Created educational materials and led compliance awareness sessions.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Virtual Cybersecurity Lab Environment (2024–2025):</strong> Designed and deployed a full lab using VirtualBox, pfSense, Kali Linux, and Windows Server. Simulated IAM tasks, incident response, and network segmentation using Snort and firewall rules.</li>
-        <li><strong>Bloomberg National CTF (June 2025):</strong> Solved 15+ challenges in cryptography, reverse engineering, and web security. Documented solutions aligned with GRC reporting. Collaborated in a high-pressure team simulating SOC-style response.</li>
-      </ul>
-    </div>
-
-    <div class="section">
       <h2>Education</h2>
       <ul>
-        <li><strong>The Knowledge House – Bronx, NY</strong><br />
+        <li><strong>The Knowledge House – Bronx, NY</strong><br>
         Innovation Fellowship – Cybersecurity Track | Expected Dec 2025</li>
-        <li><strong>COOP – New York, NY</strong><br />
+        <li><strong>COOP – New York, NY</strong><br>
         Digital Marketing Apprentice | June 2023</li>
-        <li><strong>Queens College – Queens, NY</strong><br />
-        Bachelor of Arts in Urban Studies | June 2022</li>
+        <li><strong>Queens College – Queens, NY</strong><br>
+        B.A. in Urban Studies | June 2022</li>
       </ul>
-    </div>
 
-    <div class="section">
       <h2>Certifications</h2>
       <ul>
         <li>AWS Certified Cloud Practitioner (Active)</li>
@@ -148,9 +188,71 @@
       </ul>
     </div>
 
-    <div class="quote">
-      “Fueled by curiosity.”
+    <!-- EXPERIENCE -->
+    <div id="experience" class="section">
+      <h2>Professional Experience</h2>
+      <p><strong>Compliance & Data Analysis Associate – Microsoft Advertising</strong><br>
+      New York, NY | June 2023 – Jan 2025</p>
+      <ul>
+        <li>Resolved 30+ technical tickets per month involving permissions and IAM issues.</li>
+        <li>Documented secure data handling procedures for compliance audits.</li>
+        <li>Trained peers on account management and security protocols.</li>
+        <li>Built Power BI dashboards that resolved 85% of data requests and cut errors by 40%.</li>
+      </ul>
+
+      <p><strong>Community Compliance & Operations Coordinator – Pomonok Community Center</strong><br>
+      Pomonok, NY | June 2021 – Dec 2021</p>
+      <ul>
+        <li>Managed secure documentation for 500+ residents to meet audit requirements.</li>
+        <li>Implemented Plentiful App for tracking participant data, reducing errors by 40%.</li>
+        <li>Created educational materials and led compliance awareness sessions.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Cybersecurity Home Lab Environment (2024–2025):</strong> Designed and deployed a virtualized lab using VirtualBox with Kali Linux, Windows Server, and Ubuntu. Simulated IAM tasks, incident response, and network segmentation using pfSense and Snort.</li>
+        <li><strong>Bloomberg Hackathon Cybersecurity CTF (2025):</strong> Completed 15+ challenges in cryptography, reverse engineering, and web security. Applied OSINT and forensics to incident response scenarios and documented mitigation strategies for GRC and SOC use cases.</li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section">
+      <h2>Contact Me</h2>
+      <p><strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourhandle/" target="_blank">linkedin.com/in/yourhandle</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/edzmeme" target="_blank">github.com/edzmeme</a></p>
+      <div class="quote">“Fueled by curiosity and guided by dragons.” 🐉</div>
     </div>
   </div>
+
+  <script>
+    // Dragon-tab switcher with smooth fade + glow
+    const buttons = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // change active button
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // fade-out current section
+        sections.forEach(sec => sec.classList.remove('active','dragon-glow'));
+        const target = document.getElementById(btn.dataset.tab);
+
+        // small delay for smoothness
+        setTimeout(() => {
+          target.classList.add('active','dragon-glow');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 150);
+      });
+    });
+  </script>
 </body>
 </html>
+
+
+update index.html – add dragon tabs and animations
