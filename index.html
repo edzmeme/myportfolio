@@ -129,7 +129,6 @@
       margin-top: 30px;
     }
 
-    /* === DRAGON GLOW EFFECT === */
     .dragon-glow {
       animation: glow 1s ease-in-out forwards;
     }
@@ -155,7 +154,8 @@
   </nav>
 
   <div class="container">
-    <!-- ABOUT -->
+
+    <!-- ABOUT SECTION -->
     <div id="about" class="section active dragon-glow">
       <h2>Summary</h2>
       <p>Adaptable professional transitioning into Compliance, GRC, and IAM roles with experience in access controls, secure data handling, and documentation. Gaining hands-on cybersecurity skills through virtual labs and national CTFs. Currently pursuing CompTIA Security+ to deepen knowledge in risk management and regulatory compliance.</p>
@@ -175,8 +175,10 @@
       <ul>
         <li><strong>The Knowledge House – Bronx, NY</strong><br>
         Innovation Fellowship – Cybersecurity Track | Expected Dec 2025</li>
+
         <li><strong>COOP – New York, NY</strong><br>
         Digital Marketing Apprentice | June 2023</li>
+
         <li><strong>Queens College – Queens, NY</strong><br>
         B.A. in Urban Studies | June 2022</li>
       </ul>
@@ -188,9 +190,10 @@
       </ul>
     </div>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCE SECTION -->
     <div id="experience" class="section">
       <h2>Professional Experience</h2>
+
       <p><strong>Compliance & Data Analysis Associate – Microsoft Advertising</strong><br>
       New York, NY | June 2023 – Jan 2025</p>
       <ul>
@@ -209,22 +212,57 @@
       </ul>
     </div>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS SECTION -->
     <div id="projects" class="section">
       <h2>Projects</h2>
+
       <ul>
-        <li><strong>Cybersecurity Home Lab Environment (2024–2025):</strong> Designed and deployed a virtualized lab using VirtualBox with Kali Linux, Windows Server, and Ubuntu. Simulated IAM tasks, incident response, and network segmentation using pfSense and Snort.</li>
-        <li><strong>Bloomberg Hackathon Cybersecurity CTF (2025):</strong> Completed 15+ challenges in cryptography, reverse engineering, and web security. Applied OSINT and forensics to incident response scenarios and documented mitigation strategies for GRC and SOC use cases.</li>
+
+        <!-- CYBERSECURITY HOME LAB -->
+        <li><strong>Cybersecurity Home Lab Environment (2024–2025):</strong>
+          Designed and deployed a virtualized enterprise-style cybersecurity lab using VirtualBox with Kali Linux, Windows Server, and Ubuntu.
+          <ul>
+            <li>Configured Active Directory, user/group policies, and IAM-style access controls to simulate enterprise permission structures.</li>
+            <li>Implemented pfSense firewalling, VLAN segmentation, and Snort IDS for traffic monitoring and threat detection.</li>
+            <li>Conducted vulnerability scans, packet capture analysis, and incident response exercises across multi-VM environments.</li>
+            <li>Documented lab setup, network design, and incident findings in a technical case-study format.</li>
+          </ul>
+        </li>
+
+        <!-- BLOOMBERG CTF -->
+        <li><strong>Bloomberg Hackathon Cybersecurity CTF (2025):</strong>
+          Competed in a national cybersecurity challenge covering exploitation, cryptography, forensics, and OSINT.
+          <ul>
+            <li>Completed 15+ challenges involving web exploitation, reverse engineering, and privilege escalation.</li>
+            <li>Analyzed packet captures, system logs, and memory dumps to reconstruct attack paths.</li>
+            <li>Developed remediation strategies and mapped vulnerabilities to severity levels for SOC/GRC insights.</li>
+            <li>Collaborated with team members to optimize challenge workflows and accelerate solution time.</li>
+          </ul>
+        </li>
+
+        <!-- PHASE 2 VPC PEERING -->
         <li><strong>AWS VPC Peering Connection – Team Project (2025):</strong>
-  Collaborated with teammates to design and validate a secure, cross-region AWS network architecture connecting two isolated VPCs via a peering connection between the “Water Tribe” and “Earth Kingdom” environments.
-  <ul>
-    <li>Provisioned VPCs in <code>us-east-1</code> and <code>us-east-2</code> using Terraform and AWS CLI for consistent infrastructure as code.</li>
-    <li>Configured and tested <strong>VPC Peering Connections</strong>, route tables, and security groups to enable private traffic flow across regions without public exposure.</li>
-    <li>Utilized <strong>VPC Reachability Analyzer</strong> to validate network paths and document successful connectivity between EC2 instances.</li>
-    <li>Implemented least-privilege IAM policies for cross-region communication and verified logging via CloudTrail and Flow Logs.</li>
-    <li>Created a network topology diagram and contributed to the final project documentation detailing architecture, controls, and lessons learned.</li>
-  </ul>
-</li>
+          Collaborated with teammates to design a secure, cross-region AWS network architecture connecting two isolated VPCs.
+          <ul>
+            <li>Provisioned VPCs in <code>us-east-1</code> and <code>us-east-2</code> using Terraform and AWS CLI.</li>
+            <li>Configured VPC Peering, route tables, and security groups to enable private cross-region traffic.</li>
+            <li>Used <strong>VPC Reachability Analyzer</strong> to validate routing paths and connectivity.</li>
+            <li>Applied least-privilege IAM policies to secure cross-region communication.</li>
+            <li>Created topology diagrams and contributed to final project documentation.</li>
+          </ul>
+        </li>
+
+        <!-- PHASE 3 MONITORING + SIEM -->
+        <li><strong>AWS Monitoring & SIEM Pipeline – Phase 3 Project (2025):</strong>
+          Built a monitoring and detection pipeline using AWS CloudWatch, CloudTrail, S3, IAM, and Wazuh SIEM.
+          <ul>
+            <li>Configured CloudWatch Agent and IAM instance profiles for EC2 performance monitoring.</li>
+            <li>Integrated CloudTrail and S3 logs with Wazuh to centralize event ingestion and alerting.</li>
+            <li>Validated NAT Gateway routing and private network communication paths.</li>
+            <li>Mapped log events to Wazuh detection rules to strengthen SIEM accuracy and visibility.</li>
+            <li>Documented architecture diagrams, IAM roles, detection logic, and compliance considerations.</li>
+          </ul>
+        </li>
 
       </ul>
     </div>
@@ -232,29 +270,26 @@
     <!-- CONTACT -->
     <div id="contact" class="section">
       <h2>Contact Me</h2>
-      <p><strong>Email:</strong> <a href="mailto:youremail@example.com">emema3132@Gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourhandle/" target="_blank">https://www.linkedin.com/in/edona-mema/</a></p>
+      <p><strong>Email:</strong> <a href="mailto:emema3132@gmail.com">emema3132@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/edona-mema/" target="_blank">https://www.linkedin.com/in/edona-mema/</a></p>
       <p><strong>GitHub:</strong> <a href="https://github.com/edzmeme" target="_blank">github.com/edzmeme</a></p>
       <div class="quote">“Fueled by curiosity and guided by dragons.” 🐉</div>
     </div>
+
   </div>
 
   <script>
-    // Dragon-tab switcher with smooth fade + glow
     const buttons = document.querySelectorAll('.tab-btn');
     const sections = document.querySelectorAll('.section');
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        // change active button
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        // fade-out current section
         sections.forEach(sec => sec.classList.remove('active','dragon-glow'));
         const target = document.getElementById(btn.dataset.tab);
 
-        // small delay for smoothness
         setTimeout(() => {
           target.classList.add('active','dragon-glow');
           window.scrollTo({ top: 0, behavior: 'smooth' });
